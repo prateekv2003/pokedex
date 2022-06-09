@@ -1,13 +1,103 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  box-sizing: border-box;
+}
+body,html{
+  padding:0;
+  margin:0;
+  background-color: rgb(233, 233, 233);
+}
+body{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+header{
+  margin:0;
+  padding:0;
+  height:12rem;
+  width:auto;
+  padding: 20px 10px;
+  background-color:rgba(26,26,26,.7);
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  color:white;
+}
+h1{
+  text-align:center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ======================== Search-bar ============================= */
+.search-bar{
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 70% 20%;
+  gap: 1rem;
+  width: fit-content;
+}
+.search-bar > input{
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 2rem;
+  width: 250px;
+  font-size: 16px;
+  color: white;
+  background-color: black;
+}
+.search-btn{
+  padding: 0.5rem;
+  width: 7rem;
+  border: 1px solid black;
+  border-radius: 2rem;
+  font-size: 16px;
+  color: black;
+  background-color: white;
+}
+.search-btn:hover{
+  border: 1px solid black;
+  color: white;
+  background-color: black;
+}
+/* ================================ Error-box ======================================= */
+
+#error-box{
+  color: red;
+}
+/* ================================ Pokemon Card ==================================== */
+#poke-card{
+  margin: 2rem auto;
+  display:grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  padding:1rem;
+  width: 250px;
+  background: rgb(209, 209, 209);
+  border: 2px solid black;
+  border-radius: 1rem;
+}
+#poke-card > h3{
+  font-size: 16px;
+}
+
+#poke-image-div{
+  margin: 0 auto;
+}
+
+#poke-image{
+  margin: 20px;
+  border: 4px double black;
+}
+
+/* ========================= mobile-device =========================== */
+
+@media screen and (max-width:600px){  
+  .search-bar{
+    gap: 0;
+  }
+
+  .search-bar > input{
+    padding: 0.6rem;
+    width: 200px;
+  }
 }
