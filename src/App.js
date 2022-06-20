@@ -41,14 +41,14 @@ const App = () => {
   return (
     <>
       <header>
-        <h1>PokeDex</h1>
+        <h1>Pokedex</h1>
       </header>
 
       <div className="search-bar">
         <input type="text" id="search_box" placeholder="Enter name of pokemon" onChange={(e) => SetInput(e.target.value)} />
         <button className="search-btn" onClick={search_pokemon}>Search</button>
       {
-        error_box?<small id="error-box">Pokemon not found! :\</small>:null
+        error_box?<small id="error-box">Pokemon not found! 😥</small>:null
       }
       </div>
       <div id="poke-card">

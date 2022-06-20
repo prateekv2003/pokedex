@@ -6,11 +6,29 @@ body,html{
   margin:0;
   background-color: rgb(233, 233, 233);
 }
+
 body{
   display:flex;
   flex-direction: column;
   flex-wrap: wrap;
+  animation: gradient 15s ease infinite;
+  background: linear-gradient(-45deg,#ee7752,#e73c7e,#23a6d5,#23d5ab);
+  background-size: 400% 400%;
 }
+
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
 header{
   margin:0;
   padding:0;
@@ -72,10 +90,16 @@ h1{
   align-items: center;
   padding:1rem;
   width: 250px;
-  background: rgb(209, 209, 209);
-  border: 2px solid black;
   border-radius: 1rem;
+  border: 2px solid #9ecaed;
+  outline: none;
+  box-shadow: 0 2px 20px #9ecaed;
+  background-image: url("./assets/card-bg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 #poke-card > h3{
   font-size: 16px;
 }
@@ -92,6 +116,10 @@ h1{
 /* ========================= mobile-device =========================== */
 
 @media screen and (max-width:600px){  
+  body{
+    height: 100vh;
+  }
+
   .search-bar{
     gap: 0;
   }
